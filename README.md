@@ -45,4 +45,8 @@ yarn encore dev
 
 symfony server:start
 
-Visit `http://localhost:8000/game` in your web browser to see the application in action.
+Visit `http://localhost:8000` in your web browser to see the application in action.
+
+## Running Tests
+
+php bin/phpunit
