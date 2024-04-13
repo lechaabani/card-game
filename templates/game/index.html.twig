@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Jeu de Cartes{% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Jeu de Cartes</h1>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">Main non triée</div>
+                    <ul class="list-group list-group-flush">
+                        {% for card in unsorted_hand %}
+                            <li class="list-group-item">{{ card }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-success text-white">Main triée</div>
+                    <ul class="list-group list-group-flush">
+                        {% for card in sorted_hand %}
+                            <li class="list-group-item">{{ card }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <button class="btn btn-info" onclick="location.reload();">Recharger la page</button>
+        </div>
+    </div>
+{% endblock %}
